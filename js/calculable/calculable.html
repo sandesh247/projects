@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>calculable</title>
+    <script src="../lib/jquery+/jquery-1.3.1.min.js" type="text/javascript" language="javascript"></script>
+    <script src="jquery.calculable-0.1.js" type="text/javascript" language="javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function() {
+            $('#calculable')
+            .calculable()
+            .blur(function(e) { $("#message").val("Now tab back in ..."); })
+            .focus(function(e) { $("#message").val(""); });
+        });
+    </script>
+
+</head>
+<body>
+<div>Type some expression (eg. 3+4)in the text box below, and tab out.</div>
+<div><input type="text" id="calculable" /></div>
+<div></div><input type="text" id="message" /></div>
+List of supported functions <a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Math" title="Math - MDC">here</a>.
+</body>
+</html>
